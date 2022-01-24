@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --white: hsl(0, 0%, 100%);
+
+}
+
+/* this is a reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* main styles */
+
+body{
+    background-color: var(--main-bg);
+    font-family: "Outfit", sans-serif;
+    padding: 5rem;
+}
+
+img {
+    max-width: 100%; /* this will make sure it will always fit the container surrounding it */
+}
+
+ul {
+    list-style-type: none;/* gets rid of bullets */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 0rem;
+}
+
+h1 {
+    padding: 1rem 0rem 1rem 0rem;
+}
+
+p {
+    color: var(--soft-blue);
+    font-size: 18px;
+    font-weight: 300;
+}
+
+hr{
+    height: 1px;
+    background-color: var(--line);
+    border: none;
+}
+
+
+.attribution p {
+    font-size: 12px;
+    padding-bottom: 20px;
+    text-align: center;
+    color: var(--white);
+}
+
+.attribution a {
+    color: var(--soft-blue);
+    text-decoration: none;
+}
+
+.container {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    margin: 2.75rem;
+    border-radius: 1.25rem;
+}
+
+
+/* text styles & anchor tags */
+
+h1 a.equilibrium {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.artist-bio {
+    background-color: var(--card-bg);
+    color: var(--soft-blue);
+    font-size: 1rem;
+    position: relative;
+    display: inline-block;
+    left: 10px;
+    bottom: 10px;
+}
+
+a.eth {
+    color: var(--cyan);
+    margin-left: 0.3rem;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+p.artist-bio {
+   position: relative;
+   left: 3.5rem;
+   bottom: 2rem;
+}
+
+.creator {
+    text-decoration: none;
+    color: var(--white);
+}
+
+
+/* images */
+
+.cube {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.ethereum {
+    position: relative;
+    top: 0.2rem;
+}
+
+.clock {
+    position: relative;
+    right: 0.3rem;
+    top: 0.1rem;
+}
+
+div.profile-pic {
+    margin-top: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+    height: 40px;
+    width: 40px;
+}
+
+.container .img-container {
+    position: relative;
+}
+
+.container .img-container div {
+    position: absolute;
+    top: 0;
+    border-radius: 0.5rem;
+    background-color: rgba(0, 255, 247, 50%);
+    width: 100%;
+    height: 99%;
+    z-index: 999;
+    opacity: 0;
+    transition: opacity ease-in-out 0.5s;
+}
+
+.container .img-container div img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* hover states */
+
+.container .img-container div:hover {
+    opacity: 1; 
+    cursor: pointer;
+}
+
+.creator:hover {
+    text-decoration: none;
+    color: var(--cyan);
+    transition: ease-in 0.5s;
+    cursor: pointer;
+}
+
+h1 a.equilibrium:hover {
+    text-decoration: none;
+    color: var(--cyan);
+    transition: ease-in 0.5s;
+    cursor: pointer;
+}
+
+
+@media (min-width: 400px) {
+    .container {
+        width: 375px;
+        margin: 0 auto;
+    }
+    .attribution {
+        padding-top: 15px;
+        margin: 0 auto;
+    }
+}
